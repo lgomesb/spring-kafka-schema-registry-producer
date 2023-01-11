@@ -1,0 +1,8 @@
+pt\com\poc\schemaregistry\kafkaproducer\model\avroschema\TaxPayer.class
+pt\com\poc\schemaregistry\kafkaproducer\model\avroschema\TaxPayer$Builder.class
+com\irs\register\avro\taxpayer\TaxPayer$Builder.class
+com\irs\register\avro\taxpayer\TaxPayer.class
+pt\com\poc\schemaregistry\kafkaproducer\config\properties\KafkaProperties.class
+pt\com\poc\schemaregistry\kafkaproducer\KafkaProducerApplication.class
+pt\com\poc\schemaregistry\kafkaproducer\config\MessagingConfigPort.class
+pt\com\poc\schemaregistry\kafkaproducer\config\MessagingConfigTaxPayer.class
