@@ -20,8 +20,7 @@ public class KafkaProducerServiceImpl implements KafkaProducerService {
     public void send(ProducerRecord<String, TaxPayer> record) {
         producer.send(record);
 		producer.flush();
-		producer.close();
-        
+		// producer.close();        
     }
     
 }

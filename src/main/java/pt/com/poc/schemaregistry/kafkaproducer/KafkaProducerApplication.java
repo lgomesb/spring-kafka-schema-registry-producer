@@ -23,13 +23,19 @@ public class KafkaProducerApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
+		String name = "Test";
 		TaxPayer taxPayer = TaxPayer.newBuilder()
-		.setName("Nome Exemplo")
+		.setName(name)
 		.setDocument("Valor do Documento")
 		.setSituation(true)
 		.build();
-
-		service.send(new ProducerRecord<String,TaxPayer>(TOPIC, taxPayer));
+		
+		for( int i = 0 ; i < 10; i++) {
+			taxPayer.put("name", name + " " + i);
+			service.send(new ProducerRecord<String,TaxPayer>(TOPIC, taxPayer));
+			System.out.printf(":::: Send event: ", taxPayer);
+			Thread.sleep(500l);
+		}
 
 	}
 
